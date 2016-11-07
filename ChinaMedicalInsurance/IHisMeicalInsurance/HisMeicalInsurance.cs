@@ -15,6 +15,6 @@ namespace HisMeicalInsurance
         /// </summary> 
         /// <param name="parmeter">HIS与医保DLL数据互通的桥梁，可自行协订HIS与医保DLL传递的参数</param>
         /// <returns></returns>
-        short Invoke(dynamic parmeter);
+        InvokeResult Invoke(dynamic parmeter);
     }
 }

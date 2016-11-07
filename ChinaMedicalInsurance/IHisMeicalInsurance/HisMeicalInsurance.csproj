@@ -39,8 +39,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="InvokeResult.cs" />
     <Compile Include="DynamicParameter.cs" />
     <Compile Include="HisMeicalInsurance.cs" />
+    <Compile Include="InvokeResultType.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
