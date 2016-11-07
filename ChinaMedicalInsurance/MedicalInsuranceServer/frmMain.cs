@@ -32,11 +32,12 @@ namespace MedicalInsuranceServer
         {
             var content = $"{DateTime.Now.ToString("yyyy年MM月dd日 HH时mm分ss秒")}  {entity.EntityType}";
             Log(content, Color.Red);
-
-            var dllOperation = GetDllOperation(AppDomain.CurrentDomain.BaseDirectory);
+            //加载当前目录中的医保操作类
+            var curPath = AppDomain.CurrentDomain.BaseDirectory;
+            var dllOperation = CommonHandle.GetDllOperation(curPath);
             if (dllOperation == null)
             {
-                MessageBox.Show($"在{AppDomain.CurrentDomain.BaseDirectory}下找不到实现IDllOperation的子类！", "Dll加载错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show($"在{curPath}下找不到实现IDllOperation的子类！", "Dll加载错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return new NullEntity();
             }
             else
@@ -55,36 +56,7 @@ namespace MedicalInsuranceServer
 
         }
 
-        /// <summary>
-        /// 反射得到实现IDllOperation的类型
-        /// </summary>
-        /// <param name="dir"></param>
-        /// <returns></returns>
-        IDllOperation GetDllOperation(string dir)
-        {
-            foreach (var file in System.IO.Directory.GetFiles(dir))
-            {
-                if (Path.GetExtension(file).ToUpper() == ".DLL")
-                {
-                    //加载程序集
-                    var assembly = Assembly.LoadFile(file);
-                    foreach (var type in assembly.GetTypes())
-                    {
-                        //判断是从IDllOperation继承的子类
-                        if (!type.IsInterface && !type.IsAbstract && type.GetInterface("IDllOperation") != null)
-                        {
-                            return Activator.CreateInstance(type) as IDllOperation;
-
-                        }
-                    }
-                }
-            }
-            foreach (var subdir in System.IO.Directory.GetDirectories(dir))
-            {
-                return GetDllOperation(subdir);
-            }
-            return null;
-        }
+    
 
         private void frmMain_Shown(object sender, EventArgs e)
         {

@@ -45,6 +45,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Common\CommonHandle.cs" />
     <Compile Include="Common\ConfigManage.cs" />
     <Compile Include="frmMain.cs">
       <SubType>Form</SubType>
