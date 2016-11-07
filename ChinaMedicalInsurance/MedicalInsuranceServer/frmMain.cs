@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.Reflection;
 using System.IO;
 using MedicalInsuranceBase;
+using MedicalInsuranceServer.Common;
 
 namespace MedicalInsuranceServer
 {
@@ -23,12 +24,9 @@ namespace MedicalInsuranceServer
 
         private void frmMain_Load(object sender, EventArgs e)
         {
-            this.Text = ConfigurationManager.AppSettings["title"];
+            this.Text = ConfigManage.ReateConfig("title");
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-        }
 
         private MedicalInsuranceBase.MedicalInsuranceEntity Server_SendEnvent(MedicalInsuranceBase.MedicalInsuranceEntity entity)
         {
@@ -97,7 +95,13 @@ namespace MedicalInsuranceServer
 
         }
 
-      
+
+
+        private void iPPortSetToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var frmIpPort = new frmNetMessageSet();
+            frmIpPort.ShowDialog();
+        }
     }
 
 

@@ -32,19 +32,24 @@
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.lvLog = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.系统设置ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.iP和端口设置ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
             // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.系统设置ToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(738, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(738, 25);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // toolStrip1
             // 
-            this.toolStrip1.Location = new System.Drawing.Point(0, 24);
+            this.toolStrip1.Location = new System.Drawing.Point(0, 25);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(738, 25);
             this.toolStrip1.TabIndex = 1;
@@ -55,9 +60,9 @@
             this.lvLog.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1});
             this.lvLog.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lvLog.Location = new System.Drawing.Point(0, 49);
+            this.lvLog.Location = new System.Drawing.Point(0, 50);
             this.lvLog.Name = "lvLog";
-            this.lvLog.Size = new System.Drawing.Size(738, 506);
+            this.lvLog.Size = new System.Drawing.Size(738, 505);
             this.lvLog.TabIndex = 2;
             this.lvLog.UseCompatibleStateImageBehavior = false;
             this.lvLog.View = System.Windows.Forms.View.List;
@@ -65,6 +70,21 @@
             // columnHeader1
             // 
             this.columnHeader1.Width = 730;
+            // 
+            // 系统设置ToolStripMenuItem
+            // 
+            this.系统设置ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.iP和端口设置ToolStripMenuItem});
+            this.系统设置ToolStripMenuItem.Name = "系统设置ToolStripMenuItem";
+            this.系统设置ToolStripMenuItem.Size = new System.Drawing.Size(68, 21);
+            this.系统设置ToolStripMenuItem.Text = "系统设置";
+            // 
+            // iP和端口设置ToolStripMenuItem
+            // 
+            this.iP和端口设置ToolStripMenuItem.Name = "iP和端口设置ToolStripMenuItem";
+            this.iP和端口设置ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.iP和端口设置ToolStripMenuItem.Text = "IP和端口设置";
+            this.iP和端口设置ToolStripMenuItem.Click += new System.EventHandler(this.iPPortSetToolStripMenuItem_Click);
             // 
             // frmMain
             // 
@@ -78,6 +98,8 @@
             this.Name = "frmMain";
             this.Load += new System.EventHandler(this.frmMain_Load);
             this.Shown += new System.EventHandler(this.frmMain_Shown);
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -89,6 +111,8 @@
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ListView lvLog;
         private System.Windows.Forms.ColumnHeader columnHeader1;
+        private System.Windows.Forms.ToolStripMenuItem 系统设置ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem iP和端口设置ToolStripMenuItem;
     }
 }
 
