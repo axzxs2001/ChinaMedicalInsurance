@@ -5,6 +5,20 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HisMeicalInsurance", "IHisMeicalInsurance\HisMeicalInsurance.csproj", "{32EBDCAF-6AC7-4DB1-946B-4D5A8C0A734B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MedicalInsuranceServer", "MedicalInsuranceServer\MedicalInsuranceServer.csproj", "{1F0EEBA4-32C4-4BD6-B8C6-57B1C7DAA13A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MedicalInsuranceBase", "MedicalInsuranceEntity\MedicalInsuranceBase.csproj", "{AF685227-BE54-40E5-84B0-8952BB886DD6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MedicallInsuranceDllOperation", "MedicallInsuranceDllOperation", "{24590811-3C95-486C-B361-A9DF870BDDFF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{65023311-C31C-40CD-8939-E00DD4E52E22}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MedicalInsuranceDll_Entity", "MedicallInsuranceDllOperation\Test\MedicalInsuranceDll_Entity\MedicalInsuranceDll_Entity.csproj", "{C6AD6D15-0F81-4F43-BBE5-FE0A43C0DB52}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MedicalInsuranceDll_Test", "MedicallInsuranceDllOperation\Test\MedicalInsuranceDll_Test\MedicalInsuranceDll_Test.csproj", "{481B0693-ED6E-4265-978F-10DAA500FAE1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MedicalInsuranceClientTest", "MedicallInsuranceDllOperation\Test\MedicalInsuranceClientTest\MedicalInsuranceClientTest.csproj", "{C8ADC192-7004-41C8-BF17-5CBB071E010A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,8 +29,34 @@ Global
 		{32EBDCAF-6AC7-4DB1-946B-4D5A8C0A734B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{32EBDCAF-6AC7-4DB1-946B-4D5A8C0A734B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{32EBDCAF-6AC7-4DB1-946B-4D5A8C0A734B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1F0EEBA4-32C4-4BD6-B8C6-57B1C7DAA13A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1F0EEBA4-32C4-4BD6-B8C6-57B1C7DAA13A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1F0EEBA4-32C4-4BD6-B8C6-57B1C7DAA13A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1F0EEBA4-32C4-4BD6-B8C6-57B1C7DAA13A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AF685227-BE54-40E5-84B0-8952BB886DD6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF685227-BE54-40E5-84B0-8952BB886DD6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF685227-BE54-40E5-84B0-8952BB886DD6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF685227-BE54-40E5-84B0-8952BB886DD6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C6AD6D15-0F81-4F43-BBE5-FE0A43C0DB52}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C6AD6D15-0F81-4F43-BBE5-FE0A43C0DB52}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C6AD6D15-0F81-4F43-BBE5-FE0A43C0DB52}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C6AD6D15-0F81-4F43-BBE5-FE0A43C0DB52}.Release|Any CPU.Build.0 = Release|Any CPU
+		{481B0693-ED6E-4265-978F-10DAA500FAE1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{481B0693-ED6E-4265-978F-10DAA500FAE1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{481B0693-ED6E-4265-978F-10DAA500FAE1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{481B0693-ED6E-4265-978F-10DAA500FAE1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C8ADC192-7004-41C8-BF17-5CBB071E010A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C8ADC192-7004-41C8-BF17-5CBB071E010A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C8ADC192-7004-41C8-BF17-5CBB071E010A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C8ADC192-7004-41C8-BF17-5CBB071E010A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{65023311-C31C-40CD-8939-E00DD4E52E22} = {24590811-3C95-486C-B361-A9DF870BDDFF}
+		{C6AD6D15-0F81-4F43-BBE5-FE0A43C0DB52} = {65023311-C31C-40CD-8939-E00DD4E52E22}
+		{481B0693-ED6E-4265-978F-10DAA500FAE1} = {65023311-C31C-40CD-8939-E00DD4E52E22}
+		{C8ADC192-7004-41C8-BF17-5CBB071E010A} = {65023311-C31C-40CD-8939-E00DD4E52E22}
 	EndGlobalSection
 EndGlobal
